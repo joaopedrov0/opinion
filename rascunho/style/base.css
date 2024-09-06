@@ -8,4 +8,7 @@ body{
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    background-color: rgb(54, 54, 54);
 }
