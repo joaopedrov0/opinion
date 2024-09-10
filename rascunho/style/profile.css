@@ -1,46 +1,5 @@
 header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100vw;
-    height: 60px;
     position: absolute;
-    backdrop-filter: blur(7px);
-    z-index: 5;
-}
-
-/* Search Bar */
-.search{
-    width: 40vw;
-    height: 95%;
-    display: flex;
-}
-.search input{
-    width: 80%;
-    height: 45px;
-    background-color: transparent;
-    border: 1px solid rgba(200, 200, 200, 0.8);
-    border-radius: 20px 0 0 20px;
-    padding: 10px;
-    color: aliceblue;
-}
-.searchBtn{
-    transition: all 100ms ease;
-}
-.search .searchBtn{
-    width: 20%;
-    height: 45px;
-    background-color: #004aad;
-    color: aliceblue;
-    border: 1px solid rgba(200, 200, 200, 0.8);
-    border-left: none;
-    border-radius: 0 20px 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.search > *:hover{
-    cursor: pointer;
 }
 
 /* Personal banner */
@@ -111,7 +70,11 @@ header{
     cursor: pointer;
 }
 
-.statistic{
+.bannerDesc{
+    align-self: self-end;
+}
+
+/* .statistic{
     display: flex;
 }
 .statistic > *{
@@ -132,7 +95,7 @@ header{
 }
 .book::before{
     content:'Books'
-}
+} */
 
 /* Main */
 
@@ -143,10 +106,21 @@ header{
     background-color: rgb(53,53,53);
 }
 
+/* Bio */
+
+.bio{
+    padding: 15px;
+    margin: 15px;
+    background-color: rgba(60, 60, 60, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* Reviews */
 
 .reviews{
-    width: 50%;
     min-height: 500px;
 }
 
@@ -165,7 +139,6 @@ header{
 }
 
 .stats{
-    width: 50%;
     height: 500px;
     /* background-color: green; */
 }

@@ -12,3 +12,72 @@ body{
     color: aliceblue;
     background-color: rgb(54, 54, 54);
 }
+
+.logo{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    color: #004aad;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+}
+
+
+
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    backdrop-filter: blur(7px);
+    z-index: 5;
+}
+
+/* Search Bar */
+.search{
+    width: 40vw;
+    height: 95%;
+    display: flex;
+    align-items: center;
+}
+.search input{
+    width: 80%;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid rgba(200, 200, 200, 0.8);
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    color: aliceblue;
+}
+.searchBtn{
+    transition: all 100ms ease;
+}
+.search .searchBtn{
+    width: 20%;
+    height: 45px;
+    background-color: #004aad;
+    color: aliceblue;
+    border: 1px solid rgba(200, 200, 200, 0.8);
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search > *:hover{
+    cursor: pointer;
+}
+
+
+
+/* grid */
+
+.col6{
+    width: 50%;
+}

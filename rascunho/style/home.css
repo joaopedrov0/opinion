@@ -1,0 +1,35 @@
+main{
+    display: flex;
+    width: 100vw;
+}
+
+main > * {
+    min-height: 500px;
+    padding: 50px;
+}
+
+.categoriesMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getStarted{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.getStartedBtn{
+    padding: 15px 30px;
+    background-color: #004aad;
+    margin: 10px;
+    border-radius: 30px;
+    transition: all 100ms ease;
+}
+
+.getStartedBtn:hover{
+    cursor: pointer;
+    background-color: #1567c4;
+}
