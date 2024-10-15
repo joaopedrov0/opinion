@@ -70,6 +70,21 @@ header{
     cursor: pointer;
 }
 
+.followArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+}
+
+.followers::before{
+    content: 'Followers ';
+}
+
+.following::before{
+    content: 'Following '
+}
+
 .bannerDesc{
     align-self: self-end;
 }
