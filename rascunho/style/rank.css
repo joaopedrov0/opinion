@@ -1,0 +1,119 @@
+main{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+main > * {
+    min-height: 500px;
+    padding: 50px;
+}
+
+.rank1 table{
+    width: 100%;
+}
+
+td, th{
+    padding: 10px;
+    text-align: center;
+}
+
+td{
+    height: 100px;
+}
+
+
+/* opção 2 */
+
+.rank-card{
+    width: 100%;
+    height: 250px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin: 15px 0;
+    overflow: hidden;
+    box-shadow: 3px 3px 15px rgba(80, 80, 80, 0.5);
+
+    text-shadow: 1px 1px 0px rgba(20, 20, 20, 0.9),
+    -1px -1px 0px rgba(20, 20, 20, 0.9),
+    -1px 1px 0px rgba(20, 20, 20, 0.9),
+    1px -1px 0px rgba(20, 20, 20, 0.9);
+
+    position: relative;
+}
+
+.rank-card::after{
+    content:'x°';
+    left: -40px;
+}
+
+/* .rank-card::before{
+
+} */
+
+.rank-card > *{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+}
+
+.rank-card::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: url(../img/image.png);
+    /* background: #000; */
+    background-position: center left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+.rank-card .left{
+    width: 80%;
+    padding: 20px;
+/* }
+
+.rank-card .left{ */
+    background: linear-gradient(295deg, rgb(54,54,54) /*80%*/, transparent/*100%*/);
+    backdrop-filter: blur(1px);
+}
+
+.rank-card .left .desc {
+    margin: 3px 0;
+}
+
+.rank-card .left .name{
+    font-size: 18px;
+    text-align: center;
+}
+
+.rank-card .left span.date{
+    opacity: 0.9;
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.rank-card .left .stats{
+    font-size: 12px;
+}
+
+.rank-card .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    right: 0;
+}
+
+.rank-card .nota{
+    font-size: 24px;
+}
