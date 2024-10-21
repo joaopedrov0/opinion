@@ -2,17 +2,6 @@ const SEARCH_BAR = document.querySelector('#search_bar')
 const CATEGORY_OPTION = document.querySelector('#category')
 const RESULT_LIST = document.querySelector('.resultList')
 
-class Media{
-    constructor(name, date, summary, premiered, ended, status){
-        this.name = name
-        this.date = date
-        this.summary = summary
-        this.premiered = premiered
-        this.ended = ended
-        this.status = status
-    }
-}
-
 async function search(){
     let input = SEARCH_BAR.value
     // let res = await fetch(`https://api.tvmaze.com/search/shows?q=${input}`).then((x) => x.json())
@@ -28,6 +17,24 @@ async function search(){
     
     let res = await fetch(url, options).then(x => x.json())
     renderResult(resResolver(res))
+}
+
+function toggleFilter(e){
+    console.log(e)
+    cleanFilter()
+    e.target.classList.add("selected")
+}
+
+const CATEGORY_FILTER = document.querySelectorAll(".category > *")
+function cleanFilter(){
+    for(i in CATEGORY_FILTER){
+        console.log(CATEGORY_FILTER[i])
+        console.log(CATEGORY_FILTER)
+        if (CATEGORY_FILTER[i].classList.contains("selected")){
+            
+            CATEGORY_FILTER[i].classList.remove("selected")
+        }
+    }
 }
 
 function resResolver(origin){
@@ -47,7 +54,7 @@ function renderResult(res){
                 ${fixImage(media)}
                 <div class="searchMediaText">
                     <div class="mediaHeader">
-                        <div class="mediaTitle">${media.name} <span class="time">${fixDate(media)}</span></div>
+                        <div class="mediaTitle">${solveMediaName(media)} <span class="time">${fixDate(media)}</span></div>
                         <div class="score"><span class="stars">⭐⭐⭐⭐⭐</span> | <span class="views">6.9k</span> views</div>
                     </div>
                     
@@ -62,6 +69,17 @@ function renderResult(res){
     }
     RESULT_LIST.innerHTML = resultHTML
 }
+
+
+function solveMediaName(media){
+    switch(media.media_type){
+        case 'movie':
+            return media.title
+        case 'tv':
+            return media.name
+    }
+}
+
 
 function fixDate(media){
     if (media.first_air_date != null){

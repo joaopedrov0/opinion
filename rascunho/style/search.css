@@ -50,3 +50,33 @@ main{
     font-size: 18px;
     margin: 20px;
 }
+
+.category{
+    padding: 5px 0 ;
+    margin: 15px 0;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+}
+
+.category > *{
+    margin-right: 20px;
+}
+
+.category > *:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.marked{
+    color: red;
+}
+/* 
+input[type="radio"]{
+    display: none;
+} */
+
+input[name="category"]:checked{
+    border-bottom: 1px solid red;
+}
