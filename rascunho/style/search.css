@@ -58,10 +58,15 @@ main{
     font-weight: 500;
     display: flex;
     flex-direction: row;
+
+    box-sizing: content-box
 }
 
 .category > *{
     margin-right: 20px;
+    box-sizing:content-box;
+    padding:15px 25px;
+    opacity: 0.9;
 }
 
 .category > *:hover{
@@ -69,14 +74,11 @@ main{
     opacity: 0.8;
 }
 
-.marked{
-    color: red;
-}
-/* 
 input[type="radio"]{
     display: none;
-} */
+}
 
-input[name="category"]:checked{
-    border-bottom: 1px solid red;
+input[name="category"]:checked+label{
+    border-bottom: 3px solid #004aad;
+    opacity:1;
 }

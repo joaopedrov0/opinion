@@ -1,11 +1,34 @@
 const SEARCH_BAR = document.querySelector('#search_bar')
-const CATEGORY_OPTION = document.querySelector('#category')
+
 const RESULT_LIST = document.querySelector('.resultList')
+console.log(1)
 
 async function search(){
+    const CATEGORY_OPTION = document.querySelector('input[name="category"]:checked')
+
     let input = SEARCH_BAR.value
     // let res = await fetch(`https://api.tvmaze.com/search/shows?q=${input}`).then((x) => x.json())
-    let url = `https://api.themoviedb.org/3/search/multi?query=${input}&include_adult=false&language=pt-BR&page=1`
+    let url = ''
+
+    switch(CATEGORY_OPTION.value){
+        // case 'all':
+        //     url = `https://api.themoviedb.org/3/search/multi?query=${input}&include_adult=false&language=pt-BR&page=1`
+        case 'movies':
+            url = `https://api.themoviedb.org/3/search/movie?query=${input}&include_adult=false&language=pt-BR&page=1`
+            break
+        case 'series':
+            url = `https://api.themoviedb.org/3/search/tv?query=${input}&include_adult=false&language=pt-BR&page=1`
+            break
+        case 'animes':
+            url = `https://api.themoviedb.org/3/search/tv?query=${input}&include_adult=false&language=pt-BR&page=1`
+            break
+        case 'jogos':
+            url = ``
+            break
+        case 'books':
+            url = ``
+            break
+    }
     const options = {
         method: 'GET',
         headers: {
@@ -13,9 +36,10 @@ async function search(){
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZTEyYmNkYzc1ODMwOWFlZjU2YWI3YTFmYmQ3YzIyOCIsIm5iZiI6MTcyOTUxODIzMy41ODU4NTMsInN1YiI6IjY3MTNjMjM1ZDViNzkyNmU5NDZmYzQ5NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.iPRn6COPbdHZ0BgkJ4hGeRZUjSrPVWGg-dfYs7ejka0'
         }
     }
-    
-    
-    let res = await fetch(url, options).then(x => x.json())
+
+    let res = await fetch(url, options).then(x => x.json()).catch(err => console.error(err))
+
+
     renderResult(resResolver(res))
 }
 
@@ -72,11 +96,19 @@ function renderResult(res){
 
 
 function solveMediaName(media){
-    switch(media.media_type){
-        case 'movie':
+    if (media.media_type){
+        switch(media.media_type){
+            case 'movie':
+                return media.title
+            case 'tv':
+                return media.name
+        }
+
+    } else {
+        if (media.title){
             return media.title
-        case 'tv':
-            return media.name
+        }
+        return media.name
     }
 }
 
