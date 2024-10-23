@@ -1,11 +1,36 @@
-main{
+header{
+    backdrop-filter: none;
+    position: absolute;
     display: flex;
-    width: 100vw;
+    justify-content: space-between;
 }
 
-main > * {
+
+
+main{
+    background-image: url('../img/pexels-ron-lach-9807277.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 300px 50px 50px 50px;
+}
+
+/* main > * {
     min-height: 500px;
     padding: 50px;
+} */
+
+main .col12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .col12:first-child{
+    margin-bottom: 100px;
 }
 
 .categoriesMenu{
@@ -19,6 +44,8 @@ main > * {
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .getStartedBtn{
@@ -32,4 +59,53 @@ main > * {
 .getStartedBtn:hover{
     cursor: pointer;
     background-color: #1567c4;
+}
+
+.text-box-home{
+    width: 720px;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.text-box-home p:first-child{
+    width: 100%;
+    text-align: start;
+}
+.text-box-home p:last-child{
+    width: 100%;
+    text-align: end;
+}
+
+.categoriesMenu{
+    width: clamp(360px, 50%, 80vw);
+    display: flex;
+    flex-direction: column;
+}
+
+.categoriesTitle{
+    margin-bottom: 5px;
+}
+
+.categoriesTitle, .categoriesBanner{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.categoriesTitle .categoriesTitle-item, .categoriesBanner .categoriesBanner-item{
+    width: 19%;
+}
+
+.categoriesTitle-item{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid rgba(200, 200, 200, 0.9);
+    font-weight: bold;
+    font-style: italic;
 }

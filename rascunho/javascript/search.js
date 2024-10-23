@@ -1,7 +1,6 @@
 const SEARCH_BAR = document.querySelector('#search_bar')
 
 const RESULT_LIST = document.querySelector('.resultList')
-console.log(1)
 
 async function search(){
     const CATEGORY_OPTION = document.querySelector('input[name="category"]:checked')
@@ -26,6 +25,9 @@ async function search(){
             url = ``
             break
         case 'books':
+            url = ``
+            break
+        case 'users':
             url = ``
             break
     }
