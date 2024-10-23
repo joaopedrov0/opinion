@@ -82,3 +82,8 @@ input[name="category"]:checked+label{
     border-bottom: 3px solid #004aad;
     opacity:1;
 }
+
+input[name="category"]:disabled+label{
+    opacity: 0.3;
+    cursor: not-allowed;
+}

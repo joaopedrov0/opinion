@@ -40,7 +40,7 @@ async function search(){
     let res = await fetch(url, options).then(x => x.json()).catch(err => console.error(err))
 
 
-    renderResult(resResolver(res))
+    renderResult(resResolver(res), CATEGORY_OPTION.value)
 }
 
 function toggleFilter(e){
@@ -67,12 +67,19 @@ function resResolver(origin){
     return res
 }
 
-function renderResult(res){
+const titleHTML = document.querySelector('title')
+
+function renderResult(res, category){
     console.log(res)
+    titleHTML.innerText = `Buscando resultados para "${SEARCH_BAR.value}" - rank.it`
     resultHTML = `<h2>Exibindo resultados para "${SEARCH_BAR.value}"</h2>`
+    let empty = true
     if (res.length != 0){
         for (i in res){
             media = res[i]
+            if (category == 'animes' && media.origin_country[0] != 'JP') continue
+            if (category == 'series' && media.origin_country[0] == 'JP') continue
+            empty = false
             resultHTML += `
             <div class="resultItem">
                 ${fixImage(media)}
@@ -88,10 +95,11 @@ function renderResult(res){
         }
     
         
-    } else {
+    }
+    if (empty){
         resultHTML += `<p class="notFound">Oops, não encontrei o que você está buscando. Verifique a ortografia!</p>`
     }
-    RESULT_LIST.innerHTML = resultHTML
+    RESULT_LIST.innerHTML = resultHTML 
 }
 
 
