@@ -14,27 +14,27 @@
             <h2><a class="logo" href="./index.html">rank.it</a></h2>
         </header>
         <main>
-            <form action="" class="container">
+            <form method="POST" action="/cadastro" class="container">
                 <h1>Cadastro</h1>
                 <div class="field">
                     <label for="name">Nome</label>
-                    <input type="text" id="name" placeholder="Digite seu nome">
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome">
                 </div>
                 <div class="field">
                     <label for="username">Usuário</label>
-                    <input type="text" id="username" placeholder="Digite seu nome de usuário (único)">
+                    <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário (único)">
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Digite seu email">
+                    <input type="text" id="email" name="email" placeholder="Digite seu email">
                 </div>
                 <div class="field">
                     <label for="password">Senha</label>
-                    <input type="text" id="password" placeholder="Digite uma senha">
+                    <input type="text" id="password" name="password" placeholder="Digite uma senha">
                 </div>
                 <div class="field">
                     <label for="password-confirm">Confirmar senha</label>
-                    <input type="text" id="password-confirm" placeholder="Confirme sua senha"/>
+                    <input type="text" id="password-confirm" name="confirm-password" placeholder="Confirme sua senha"/>
                 </div>
                 
                 
