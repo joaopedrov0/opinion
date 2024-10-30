@@ -23,5 +23,9 @@ async function getMedia(){
 }
 
 function renderResult(media){
+    const BANNER = document.querySelector('.banner')
+    const POSTER = document.querySelector('.poster')
+    // continuar adicionando nome, descrição e tal...
+    
     console.log(res)
 }
