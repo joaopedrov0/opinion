@@ -86,6 +86,7 @@ header{
 
 .info{
     display: flex;
+    justify-content: space-evenly;
 }
 
 img.poster{
@@ -96,4 +97,40 @@ img.poster{
 
 .mediaData{
     width: 500px;
+}
+
+.btn{
+    width: 100%;
+    background-color: #004aad;
+    color: aliceblue;
+
+    border-radius: 3px;
+    transition: all 100ms ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #1567c4;
+}
+
+.season::before{
+    content: 'Temporadas: ';
+}
+
+.episodes::before{
+    content: 'Episódios: ';
+}
+
+.interact>*{
+    margin-bottom: 10px;
+}
+
+.interact>*:last-child{
+    margin-bottom: 0;
 }

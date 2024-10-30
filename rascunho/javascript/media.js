@@ -24,7 +24,7 @@ async function getMedia(){
 
 function renderResult(media){
 
-    document.querySelector('title').innerText = `${media.name} - rank.it`
+    console.log(media)
 
     let banner = document.querySelector('.banner')
     let poster = document.querySelector('img.poster')
@@ -33,7 +33,12 @@ function renderResult(media){
     let tags = document.querySelector('.tags')
     let description = document.querySelector('.description')
 
-    name.innerHTML = `${media.name} <span class="time">(${media.first_air_date.slice(0, 4)})</span>`
+    let tempTitle = media.title ? media.title : media.name
+    let tempDate = media.release_date ? media.release_date : media.first_air_date
+    name.innerHTML = `${tempTitle} <span class="time">(${tempDate.slice(0, 4)})</span>`
+    
+    document.querySelector('title').innerText = `${tempTitle} - rank.it`
+
     poster.src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${media.poster_path}`
     banner.style.backgroundImage = `url(https://image.tmdb.org/t/p/w1920_and_h1080_bestv2${media.backdrop_path})`
     description.innerText = media.overview
@@ -46,7 +51,18 @@ function renderResult(media){
     }
     // continuar adicionando nome, descrição e tal...
     
-    console.log(media)
+    
+    if (media.seasons){
+        let episodes = 0
+        for (season of media.seasons){
+            episodes += season.episode_count
+        }
+        document.querySelector('.season').innerText = media.seasons.length
+        document.querySelector('.episodes').innerText = episodes
+    } else {
+        document.querySelector('.size').style.display = 'none'
+    }
+
 }
 
 getMedia()
