@@ -23,6 +23,20 @@ body{
     background-color: rgb(54, 54, 54);
 }
 
+main{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    width: 960px;
+}
+
 .logo{
     font-size: 24px;
     font-style: italic;

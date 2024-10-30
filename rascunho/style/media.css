@@ -1,0 +1,95 @@
+header{
+    position: absolute;
+    background-color: rgba(54, 54, 54, 0.7);
+}
+
+.banner{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(https://image.tmdb.org/t/p/w1920_and_h1080_bestv2/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+    padding: 0 40px;
+}
+.banner::before{
+    content: '';
+    background-image: linear-gradient(to top, rgb(54,54,54) 1%, transparent 25%);
+    width: 100vw;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+.col6{
+    width: 50%;
+}
+
+.col3{
+    width: 25%;
+}
+
+.mediaData{
+    padding: 0 15px;
+}
+
+.mediaData > *{
+    margin: 10px 0px;
+}
+
+.mediaData .mediaTitle{
+    font-size: x-large;
+}
+
+.mediaData .description{
+    text-overflow: ellipsis;
+}
+
+.mediaData .description.minimized{
+    max-height: 100px;
+}
+
+.mediaData .mediaTitle span.time{
+    opacity: 0.6;
+}
+
+/* .mediaData .tags{
+    width: 100%;
+} */
+
+.mediaData .tags > span{
+    background-color: #004aad;
+    color: aliceblue;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    text-transform: lowercase;
+    border-radius: 2px;
+}
+
+.mediaData .tags > span::before{
+    content:'#'
+}
+
+.theresNoImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 142px;
+    height: 200px;
+    background-color: rgba(100, 100, 100);
+}
+
+.info{
+    display: flex;
+}
+
+img.poster{
+    height: 300px;
+    border-radius: 5px;
+    transform: translateY(-20%);
+}

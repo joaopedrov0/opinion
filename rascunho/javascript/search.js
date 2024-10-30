@@ -82,8 +82,9 @@ function renderResult(res, category){
             if (category == 'animes' && media.origin_country[0] != 'JP') continue
             if (category == 'series' && media.origin_country[0] == 'JP') continue
             empty = false
+            let media_type = category=='animes'||category=='series' ? 'tv' : 'movie'
             resultHTML += `
-            <div class="resultItem">
+            <a href="./media.html?id=${media.id}&category=${media_type}" class="resultItem">
                 ${fixImage(media)}
                 <div class="searchMediaText">
                     <div class="mediaHeader">
@@ -93,7 +94,7 @@ function renderResult(res, category){
                     
                     <div class="mediaDescription">${fixDescription(media)}</div>
                 </div>
-            </div>`
+            </a>`
         }
     
         

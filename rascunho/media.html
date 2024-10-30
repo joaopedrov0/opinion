@@ -7,41 +7,40 @@
 
     <!-- Importing Stylesheets -->
     <link rel="stylesheet" href="style/base.css">
-    
+    <link rel="stylesheet" href="style/media.css">
+
 </head>
 <body>
     
     <header>
-        <a class="logo" href="./index.html">rank.it</a>
-        <div class="search">
-            <input type="text" placeholder="Search series, movies, animes, etc." id="search_bar" onkeydown="checkEnter(event)">
-            <div class="searchBtn" onclick="search()">Search</div>
+        <a class="logo" href="./index.html">Rank.it</a>
+        <div class="menu">
+            <a href="" class="search">Buscar</a>
+            <a href="" class="perfil">Perfil</a>
+            <a href="" class="top">Top Rated</a>
         </div>
-        <div class="menu"></div>
     </header>
+    <div class="banner">
+        
+    </div>
     <main>
         <div class="container">
-            <div class="category">
-                <div class="category_option">Filmes, series e animes</div>
-                <div class="category_option">Jogos</div>
-                <div class="category_option">Livros</div>
+
+            <div class="info">
+                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg" alt="" class="poster">
+                <div class="mediaData">
+                     <div class="mediaTitle">Jujutsu Kaisen <span class="time">(2023)</span></div>
+                     <div class="score"><span class="stars">⭐⭐⭐⭐⭐</span> | <span class="views">6.9k</span> views</div>
+                     <div class="tags"><span>Animação</span><span>Ação</span><span>Aventura</span><span>Fantasia</span></div>
+                     <div class="description minimized" onclick="toggleExpand(event)">Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.</div>
+                 </div>
+                 <div class="interact">
+                    <!-- os botao pra marcar como visto -->
+                 </div>
             </div>
-            <div class="resultList">
-                <h2>Exibindo resultados para "Sousou no Frieren"</h2>
-                <div class="resultItem">
-                    <img src="https://static.tvmaze.com/uploads/images/medium_portrait/479/1198409.jpg" alt="" class="searchMediaImage">
-                    <div class="searchMediaText">
-                        <div class="mediaHeader">
-                            <div class="mediaTitle">Sousou no Frieren <span class="time">(2023-2025)</span></div>
-                            <div class="score"><span class="stars">⭐⭐⭐⭐⭐</span> | <span class="views">6.9k</span> views</div>
-                        </div>
-                        
-                        <div class="mediaDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facere, eius aliquam optio quasi debitis cupiditate culpa quas? Aut sint non voluptate quae adipisci architecto modi numquam corrupti doloribus natus.</div>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </main>
-    <script src="javascript/search.js"></script>
+    <script src="javascript/toggleExpand.js"></script>
 </body>
 </html>
