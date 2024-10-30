@@ -89,7 +89,11 @@ header{
 }
 
 img.poster{
-    height: 300px;
+    height: 400px;
     border-radius: 5px;
     transform: translateY(-20%);
+}
+
+.mediaData{
+    width: 500px;
 }

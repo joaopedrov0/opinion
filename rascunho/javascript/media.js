@@ -23,9 +23,30 @@ async function getMedia(){
 }
 
 function renderResult(media){
-    const BANNER = document.querySelector('.banner')
-    const POSTER = document.querySelector('.poster')
+
+    document.querySelector('title').innerText = `${media.name} - rank.it`
+
+    let banner = document.querySelector('.banner')
+    let poster = document.querySelector('img.poster')
+    let name = document.querySelector('.mediaTitle')
+    let score = document.querySelector('.score')
+    let tags = document.querySelector('.tags')
+    let description = document.querySelector('.description')
+
+    name.innerHTML = `${media.name} <span class="time">(${media.first_air_date.slice(0, 4)})</span>`
+    poster.src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${media.poster_path}`
+    banner.style.backgroundImage = `url(https://image.tmdb.org/t/p/w1920_and_h1080_bestv2${media.backdrop_path})`
+    description.innerText = media.overview
+
+    tags.innerHTML = ''
+    
+    tempTags = ''
+    for(genre of media.genres){
+        tempTags.innerHTML += `<span>${genre.name}</span>`
+    }
     // continuar adicionando nome, descrição e tal...
     
-    console.log(res)
+    console.log(media)
 }
+
+getMedia()
