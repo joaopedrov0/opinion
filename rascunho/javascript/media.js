@@ -45,9 +45,9 @@ function renderResult(media){
 
     tags.innerHTML = ''
     
-    tempTags = ''
     for(genre of media.genres){
-        tempTags.innerHTML += `<span>${genre.name}</span>`
+        console.log(genre)
+        tags.innerHTML += `<span>${genre.name}</span>`
     }
     // continuar adicionando nome, descrição e tal...
     
@@ -64,5 +64,22 @@ function renderResult(media){
     }
 
 }
+
+function calcStar(rate){
+    let res = ''
+
+    let fullStar = `<span class="material-symbols-outlined filled">star</span>`
+    let halfStar = `<span class="material-symbols-outlined filled">half_star</span>`
+    let emptyStar = `<span class="material-symbols-outlined">star</span>`
+
+    for(rate; rate < 0; rate -= 2){
+        if (i < rate){
+
+        } else if (i >= rate) {
+
+        }
+    }
+}
+
 
 getMedia()
