@@ -15,7 +15,7 @@ header .menu{
     align-items: center;
     background-image: url(https://image.tmdb.org/t/p/w1920_and_h1080_bestv2/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center center;
     background-size: clamp(300px, 1260px, 80vw);
     height: 500px;
     padding: 0 0px;
