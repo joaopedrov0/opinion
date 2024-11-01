@@ -65,21 +65,21 @@ function renderResult(media){
 
 }
 
-function calcStar(rate){
-    let res = ''
+// function calcStar(rate){
+//     let res = ''
 
-    let fullStar = `<span class="material-symbols-outlined filled">star</span>`
-    let halfStar = `<span class="material-symbols-outlined filled">half_star</span>`
-    let emptyStar = `<span class="material-symbols-outlined">star</span>`
+//     let fullStar = `<span class="material-symbols-outlined filled">star</span>`
+//     let halfStar = `<span class="material-symbols-outlined filled">half_star</span>`
+//     let emptyStar = `<span class="material-symbols-outlined">star</span>`
 
-    for(rate; rate < 0; rate -= 2){
-        if (i < rate){
+//     for(let i = 2; i <= 10; rate += 2){
+//         if (i < rate){
 
-        } else if (i >= rate) {
+//         } else if (i >= rate) {
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
 getMedia()
