@@ -3,9 +3,14 @@ const SEARCH_BAR = document.querySelector('#search_bar')
 const RESULT_LIST = document.querySelector('.resultList')
 
 async function search(){
+    let input = SEARCH_BAR.value
+
+    if (input == '') return
+
+
     const CATEGORY_OPTION = document.querySelector('input[name="category"]:checked')
 
-    let input = SEARCH_BAR.value
+    
     // let res = await fetch(`https://api.tvmaze.com/search/shows?q=${input}`).then((x) => x.json())
     let url = ''
 
