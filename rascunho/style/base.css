@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Lilita+One&family=Permanent+Marker&display=swap');
+
+/* 
+INTERATIVO
+font-family: "Permanent Marker", cursive; MUDAR Q TA RUIM ✋🚫
+
+TEXTO
+font-family: "Itim", cursive;
+
+TÍTULO
+font-family: "Lilita One", sans-serif; 
+*/
+
+
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -7,6 +21,8 @@
   'GRAD' 0,
   'opsz' 24
 }
+
+
 
 *{
     margin: 0;
@@ -18,7 +34,8 @@ body{
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: "Itim", cursive;
     color: aliceblue;
     background-color: rgb(54, 54, 54);
 }

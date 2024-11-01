@@ -1,28 +1,39 @@
 header{
     position: absolute;
-    background-color: rgba(54, 54, 54, 0.7);
+    background-color: rgba(54, 54, 54, 0.0);
+    backdrop-filter: blur(0px);
+}
+
+header .menu{
+    border: none;
 }
 
 .banner{
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-image: url(https://image.tmdb.org/t/p/w1920_and_h1080_bestv2/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-position: top center;
+    background-size: clamp(300px, 1260px, 80vw);
     height: 500px;
-    padding: 0 40px;
+    padding: 0 0px;
 }
 .banner::before{
     content: '';
-    background-image: linear-gradient(to top, rgb(54,54,54) 1%, transparent 25%);
-    width: 100vw;
+    background-image: linear-gradient(to top, rgb(54,54,54) 1%, transparent 25%),
+    linear-gradient(to bottom, rgb(54,54,54) 1%, transparent 25%),
+    linear-gradient(to right, rgb(54,54,54) 1%, transparent 25%),
+    linear-gradient(to left, rgb(54,54,54) 1%, transparent 25%); 
+    /* radial-gradient(circle, rgba(255,255,255,0) 42%, rgba(185,185,185,0.24413515406162467) 63%, rgba(137,137,137,0.6867121848739496) 75%, rgba(54,54,54,0.9808298319327731) 88%, rgba(54,54,54,1) 91%); */
+    background-size: contain;
+    width: clamp(300px, 1260px, 80vw);
     height: 500px;
     position: absolute;
     top: 0;
-    left:0;
+    align-self: center;
+
 }
 
 .col6{
@@ -43,10 +54,12 @@ header{
 
 .mediaData .mediaTitle{
     font-size: x-large;
+    font-family: "Lilita One", sans-serif;
 }
 
 .mediaData .description{
     text-overflow: ellipsis;
+    font-size: 1.1rem;
 }
 
 .mediaData .description.minimized{
@@ -92,7 +105,7 @@ header{
 img.poster{
     height: 400px;
     border-radius: 5px;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 }
 
 .mediaData{
@@ -112,6 +125,9 @@ img.poster{
     align-items: center;
 
     padding: 5px;
+
+    font-size: 0.9rem;
+    font-family: "Permanent Marker", cursive;
 }
 
 .btn:hover{

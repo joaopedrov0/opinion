@@ -45,11 +45,7 @@ async function search(){
     renderResult(resResolver(res), CATEGORY_OPTION.value)
 }
 
-function toggleFilter(e){
-    console.log(e)
-    cleanFilter()
-    e.target.classList.add("selected")
-}
+
 
 const CATEGORY_FILTER = document.querySelectorAll(".category > *")
 function cleanFilter(){
