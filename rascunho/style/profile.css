@@ -17,7 +17,7 @@ header{
 }
 .banner::before{
     content: '';
-    background-image: linear-gradient(to top, rgb(54,54,54) 1%, transparent 25%);
+    background-image: linear-gradient(to top, var(--default-grey-bg) 1%, transparent 25%);
     width: 100vw;
     height: 500px;
     position: absolute;

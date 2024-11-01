@@ -13,6 +13,10 @@ font-family: "Lilita One", sans-serif;
 */
 
 
+:root{
+    --default-grey-bg: rgb(24, 24, 24);
+}
+
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -37,7 +41,7 @@ body{
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     font-family: "Itim", cursive;
     color: aliceblue;
-    background-color: rgb(54, 54, 54);
+    background-color: var(--default-grey-bg);
 }
 
 main{

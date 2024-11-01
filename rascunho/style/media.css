@@ -1,7 +1,7 @@
 header{
     position: absolute;
-    background-color: rgba(54, 54, 54, 0.0);
-    backdrop-filter: blur(0px);
+    background-color: transparent;
+    backdrop-filter: none;
 }
 
 header .menu{
@@ -22,10 +22,10 @@ header .menu{
 }
 .banner::before{
     content: '';
-    background-image: linear-gradient(to top, rgb(54,54,54) 1%, transparent 25%),
-    linear-gradient(to bottom, rgb(54,54,54) 1%, transparent 25%),
-    linear-gradient(to right, rgb(54,54,54) 1%, transparent 25%),
-    linear-gradient(to left, rgb(54,54,54) 1%, transparent 25%); 
+    background-image: linear-gradient(to top, var(--default-grey-bg) 1%, transparent 25%),
+    linear-gradient(to bottom, var(--default-grey-bg) 1%, transparent 25%),
+    linear-gradient(to right, var(--default-grey-bg) 1%, transparent 25%),
+    linear-gradient(to left, var(--default-grey-bg) 1%, transparent 25%); 
     /* radial-gradient(circle, rgba(255,255,255,0) 42%, rgba(185,185,185,0.24413515406162467) 63%, rgba(137,137,137,0.6867121848739496) 75%, rgba(54,54,54,0.9808298319327731) 88%, rgba(54,54,54,1) 91%); */
     background-size: contain;
     width: clamp(300px, 1260px, 80vw);
@@ -60,6 +60,7 @@ header .menu{
 .mediaData .description{
     text-overflow: ellipsis;
     font-size: 1.1rem;
+    color: rgb(200, 207, 212);
 }
 
 .mediaData .description.minimized{
